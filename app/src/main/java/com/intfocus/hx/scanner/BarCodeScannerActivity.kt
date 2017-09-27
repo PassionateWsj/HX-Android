@@ -1,7 +1,9 @@
 package com.intfocus.hx.scanner
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.pm.ActivityInfo
 import android.graphics.Typeface
 import android.graphics.drawable.BitmapDrawable
@@ -19,6 +21,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import cn.bingoogolapple.qrcode.core.QRCodeView
 import com.intfocus.hx.R
+import com.intfocus.hx.subject.WebApplicationActivity
 import com.intfocus.hx.util.*
 import com.zhihu.matisse.Matisse
 import com.zhihu.matisse.MimeType
@@ -36,6 +39,7 @@ class BarCodeScannerActivity : AppCompatActivity(), QRCodeView.Delegate, View.On
 
     private var isLightOn = false
     private var isStartActivity = false
+    lateinit var mUserSP: SharedPreferences
 
     private var view: View? = null
     private var popupWindow: PopupWindow? = null
@@ -47,7 +51,7 @@ class BarCodeScannerActivity : AppCompatActivity(), QRCodeView.Delegate, View.On
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bar_code_scanner_v2)
-
+        mUserSP = getSharedPreferences("UserBean", Context.MODE_PRIVATE)
         initView()
         initListener()
 
@@ -146,6 +150,7 @@ class BarCodeScannerActivity : AppCompatActivity(), QRCodeView.Delegate, View.On
                 zbarview_barcode_scanner.closeFlashlight()
             }
         }
+
         view!!.btn_input_barcode_confirm.setOnClickListener {
             var trim = view!!.et_input_barcode.text.toString()
             if (trim == "") {
@@ -153,16 +158,14 @@ class BarCodeScannerActivity : AppCompatActivity(), QRCodeView.Delegate, View.On
                 return@setOnClickListener
             }
 
-//            zbarview_barcode_scanner.closeFlashlight()
-//            isLightOn = false
             isStartActivity = true
-//            checkLightStatus(isLightOn, view!!.tv_input_barcode_light, view!!.cb_input_barcode_light)
-            val intent = Intent(this, ScannerResultActivity::class.java)
-            intent.putExtra(URLs.kCodeInfo, trim)
-            intent.putExtra(URLs.kCodeType, "input")
+            var link = "http://sm.andoner.cn/static/app/quan.html?" + "uid=" + mUserSP.getString("user_num", "") + "code=" + trim
+            val intent = Intent(this, WebApplicationActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+            intent.putExtra(URLs.kBannerName, "核销奖券")
+            intent.putExtra(URLs.kLink, link)
             startActivity(intent)
-            popupWindow!!.dismiss()
-
+            finish()
         }
 
         view!!.iv_input_barcode_back.setOnClickListener {
@@ -216,9 +219,12 @@ class BarCodeScannerActivity : AppCompatActivity(), QRCodeView.Delegate, View.On
             zbarview_barcode_scanner.postDelayed({ zbarview_barcode_scanner.startSpot() }, 2000)
             return
         }
-        val intent = Intent(this, ScannerResultActivity::class.java)
-        intent.putExtra(URLs.kCodeInfo, result)
-        intent.putExtra(URLs.kCodeType, "barcode")
+
+        var link = "http://sm.andoner.cn/static/app/quan.html?" + "uid=" + mUserSP.getString("user_num", "") + "code=" + result
+        val intent = Intent(this, WebApplicationActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+        intent.putExtra(URLs.kBannerName, "核销奖券")
+        intent.putExtra(URLs.kLink, link)
         startActivity(intent)
         finish()
     }
