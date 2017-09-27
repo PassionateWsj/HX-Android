@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/co8_syr"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        style="@style/TitleStyle"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_banner_back"
+            style="@style/BackStyle"
+            android:onClick="dismissActivity"/>
+
+        <TextView
+            android:id="@+id/bannerTitle"
+            style="@style/TitleText"
+            android:text="选项设置"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/co10_syr"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            style="@style/SettingGroupOptionSetting">
+
+            <TextView
+                style="@style/SettingKey"
+                android:text="启用锁屏"/>
+
+            <Switch
+                android:id="@+id/switch_screenLock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+            <View style="@style/OptionSettingDivider"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            style="@style/SettingGroupOptionSetting">
+
+            <TextView
+                style="@style/SettingKey"
+                android:text="报表操作"/>
+
+            <Switch
+                android:id="@+id/switch_report_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+            <View style="@style/OptionSettingDivider"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/SettingGroupOptionSetting"
+
+            android:visibility="gone">
+
+            <TextView
+                style="@style/SettingKey"
+                android:text="横屏显示标题栏"/>
+
+            <Switch
+                android:id="@+id/switch_landscape_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+
+            <View style="@style/OptionSettingDivider"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/item_clear_cache"
+            style="@style/SettingGroupOptionSetting"
+            android:onClick="clearUserCache">
+
+            <TextView
+                style="@style/SettingKey"
+                android:text="清理缓存"/>
+
+            <ImageView
+                style="@style/SettingArrow"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

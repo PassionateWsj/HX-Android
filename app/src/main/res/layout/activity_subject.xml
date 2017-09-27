@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.intfocus.hx.subject.SubjectActivity">
+
+    <include layout="@layout/item_action_bar"></include>
+
+    <LinearLayout
+        android:id="@+id/ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_action_bar"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/co9_syr" />
+
+        <RelativeLayout
+            android:id="@+id/rl_address_filter"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_location_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/tv_address_filter"
+                android:drawablePadding="15dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:maxLines="1"
+                android:paddingLeft="16dp"
+                android:textColor="@color/co15_syr"
+                android:textColorHint="@color/co4_syr"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_address_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="6dp"
+                android:drawableRight="@drawable/pop_screen_gray"
+                android:gravity="center_vertical"
+                android:paddingRight="16dp"
+                android:text="筛选"
+                android:textColor="@color/co6_syr"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/co9_syr" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/filter_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/co9_syr"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_filter">
+
+        <WebView
+            android:id="@+id/browser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/actionBar"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/anim_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                app:indicatorColor="@color/loading"
+                app:indicatorName="BallPulseIndicator" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <com.joanzapata.pdfview.PDFView
+        android:id="@+id/pdfview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionBar"
+        android:visibility="gone" />
+
+</RelativeLayout>

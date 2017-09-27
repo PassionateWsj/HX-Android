@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/co8_syr"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/co6_syr">
+
+        <TextView
+            android:id="@+id/tv_banner_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="生意概况"
+            android:textColor="@color/co10_syr"
+            android:textSize="17sp"/>
+
+        <RelativeLayout
+            style="@style/BannerRightButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginRight="0dp"
+            android:onClick="startBarCodeActivity">
+            <ImageView
+                android:id="@+id/bannerSetting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:src="@drawable/nav_scan"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsv_kpi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/co8_syr">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/co8_syr"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="140dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/vp_kpi_stick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="16dp"
+                        app:ci_animator="@anim/indicator_no_anim"
+                        app:ci_height="5dp"
+                        app:ci_width="5dp"
+                        app:ci_margin="4dp"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_kpi_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/co6_syr"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icon_news"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:text="[推荐]"
+                            android:textSize="13sp"
+                            android:textColor="@color/co7_syr"/>
+
+                    <sumimakito.android.advtextswitcher.AdvTextSwitcher
+                        android:id="@+id/tv_kpi_notice"
+                        style="@style/tv_base_stytle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="第二集群九月数据己更新"
+                        android:layout_gravity="center_vertical"
+                        app:gravity="left"
+                        app:textSize="13sp"
+                        tools:ignore="HardcodedText"/>
+
+                </LinearLayout>
+                <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+                    android:id="@+id/trl_refresh_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:tr_enable_loadmore="false">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rc_kpi_groups"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="海量数据, 运筹帷幄"
+                    android:textColor="@color/co4_syr"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/pic_1"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

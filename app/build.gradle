@@ -1,0 +1,117 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    signingConfigs {
+    }
+    compileSdkVersion 25
+    buildToolsVersion '25.0.3'
+    defaultConfig {
+        applicationId 'com.intfocus.hx'
+        minSdkVersion 19
+        targetSdkVersion 25
+        multiDexEnabled true
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a', 'mips', 'mips64'
+        }
+    }
+    if (System.getenv().containsKey("KEYSTORE"))
+        signingConfigs {
+            release {
+                storeFile file(System.getenv("KEYSTORE"))
+                storePassword System.getenv("KEYSTORE_PASSWORD")
+                keyAlias System.getenv("KEY_ALIAS")
+                keyPassword System.getenv("KEY_PASSWORD")
+            }
+        }
+    buildTypes {
+        release {
+            proguardFiles 'proguard-rules.pro' //getDefaultProguardFile('proguard-android.txt'),
+            if (System.getenv().containsKey("KEYSTORE"))
+                signingConfig signingConfigs.release
+        }
+        debug {
+
+        }
+    }
+
+    allprojects {
+        repositories {
+            jcenter()
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+def SUPPORT_VERSION = "25.3.1"
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:' + SUPPORT_VERSION
+    compile 'com.android.support:support-v4:' + SUPPORT_VERSION
+    compile 'com.android.support:design:' + SUPPORT_VERSION
+    compile project(':android-pdfview') //PDF 阅读
+    compile project(':HomeMetrics') //模板三相关
+    compile project(':jgraph') //模板二/KPI 图标
+    compile project(':switchText') //文字滚动
+    compile project(':PushSDK')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile(name: 'blib-1.0', ext: 'aar')
+    compile files('libs/android-viewbadger.jar')
+    compile files('libs/umeng_shareboard_widget.jar')
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/umeng_social_shareboard.jar')
+    compile files('libs/umeng_social_tool.jar')
+    compile files('libs/wechat-sdk-android-with-mta-1.1.6.jar')
+    compile files('libs/SocialSDK_WeiXin_Full.jar')
+    compile files('libs/xutils-3.5.0.jar')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    //    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+//    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    compile 'com.amap.api:location:latest.integration' //高德定位
+    compile files('libs/pinyin4j-2.5.0.jar') //拼音
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.pgyersdk:sdk:2.5.6' //蒲公英 SDK
+    compile 'commons-io:commons-io:2.4'
+    compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile 'com.wang.avi:library:2.1.3' //报表加载动画
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2' // Chart 图表库
+    compile 'com.yanzhenjie:recyclerview-swipe:1.0.4'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'org.apache.commons:commons-lang3:3.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'me.relex:circleindicator:1.2.2@aar'
+    compile 'com.zzhoujay.richtext:richtext:2.5.2'
+    compile 'com.lcodecorex:tkrefreshlayout:1.0.7'
+    compile 'pub.devrel:easypermissions:0.4.0'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    compile 'cn.bingoogolapple:bga-zbar:1.1.7@aar'
+    compile 'com.zhihu.android:matisse:0.4.3'
+    compile 'com.github.bumptech.glide:glide:3.7.0'  //可使用 Xutils 替换
+    compile 'top.zibin:Luban:1.1.2'
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'com.j256.ormlite:ormlite-android:5.0'
+    compile 'com.tencent.bugly:crashreport:latest.release' // Bugly-SDK
+    compile 'com.tencent.bugly:nativecrashreport:latest.release' // Bugly-NDK
+    compile 'com.daimajia.numberprogressbar:library:1.4@aar'
+}

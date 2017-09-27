@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SortCheckBox">
+        <attr name="sort_upicon" format="integer" />
+        <attr name="sort_downicon" format="integer" />
+        <attr name="sort_noneicon" format="integer" />
+        <attr name="checked" format="boolean" />
+        <attr name="sort_placeicon">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

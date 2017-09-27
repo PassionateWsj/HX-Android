@@ -1,0 +1,218 @@
+pgyer: &pgyer
+  user_key: 'f6e103c159fc1ad745b154de23970e96'
+  api_key: '45be6d228e747137bd192c4c47d4f64a'
+yh_android:
+  app_code: 'yonghui'
+  slogan_text: '融合共享，成于至善'
+  application_id: 'com.intfocus.yh_android'
+  display_status:
+    drop_menu_scan: 1
+    drop_menu_voice: 1
+    drop_menu_search: 1
+    drop_menu_user_info: 1
+    tab_bar: 1
+    tab_bar_kpi: 1
+    tab_bar_analyse: 1
+    tab_bar_app: 1
+    tab_bar_message: 1
+    subject_comment: 1
+    subject_share: 1
+    dashboard_ad: 0
+  key_store:
+    path: 'key-store/yh.jks'
+    password: '123456'
+    alias: 'yh'
+    alias_password: '123456'
+  server: 'http://yonghui.idata.mobi'
+  pgyer:
+    shortcut: 'yh-a'
+    ios: '7586e8c77ceadd3240c5e243e9d0c391'
+    android: 'c586f556015342bcf89f8300ccfbebc2'
+    <<: *pgyer
+  umeng:
+    ios:
+      app_key: '56f9ebad67e58eb4990012c8'
+      app_master_secret: 'htmkbwvwajimv3h3od4apyvh6kkxaibv'
+    android:
+      app_key: '570f5750e0f55a54670017e1'
+      umeng_message_secret: 'da55d55bd0b2a0bba722d541fe0454ac'
+      app_master_secret: 'bvc7vwmsch6uyqcahmjpz92ogclnv4im'
+  umeng_weixin:
+    ios:
+      app_id: 'wx9173274e2ea0d365'
+      app_secret: '22a92f9b55da6357e02e25f069ad7883'
+    android:
+      app_id: 'wx50edd59f119da198'
+      app_secret: 'e8fa301d58ff838b93268eb0e6b14ccb'
+yonghuitest:
+  app_code: 'yonghuitest'
+  slogan_text: '融合共享，成于至善'
+  application_id: 'com.intfocus.yonghuitest'
+  display_status:
+    drop_menu_scan: 1
+    drop_menu_voice: 1
+    drop_menu_search: 1
+    drop_menu_user_info: 1
+    tab_bar: 1
+    tab_bar_kpi: 1
+    tab_bar_analyse: 1
+    tab_bar_app: 1
+    tab_bar_message: 1
+    subject_comment: 1
+    subject_share: 1
+    dashboard_ad: 0
+  key_store:
+    path: 'key-store/yh-test.jks'
+    password: '123456'
+    alias: 'yh-test'
+    alias_password: '123456'
+  server: 'http://yonghui-test.idata.mobi'
+  pgyer:
+    shortcut: 'yh-test-a'
+    ios: '1d835e3e87539d37790403d1e5f26ef6'
+    android: 'a0fb26faac52207f08129f092274f8c6'
+    <<: *pgyer
+  umeng:
+    ios:
+      app_key: '57b522fee0f55a7ba8001606'
+      app_master_secret: 'b9hrhicnycedbzftct4uvlenw0tbivez'
+    android:
+      app_key: '57b5224467e58e3e9b001fc2'
+      umeng_message_secret: '58d8d622c94e9c63cb4eaf88d80ac657'
+      app_master_secret: 'hvwuatglggfpvzwguyeupedxmfiutww4'
+  umeng_weixin:
+    ios:
+      app_id: 'wxc48d00458356ccb6'
+      app_secret: '2ee0c11d37b992dc882c7fe967469fa7'
+    android:
+      app_id: 'wxcff211a335b17088'
+      app_secret: 'af964fd476b59bf54682bb15f23a0569'
+shengyiplus:
+  app_code: 'shengyiplus'
+  slogan_text: '传递数据 助力决策'
+  application_id: 'com.intfocus.shengyiplus'
+  display_status:
+    drop_menu_scan: 1
+    drop_menu_voice: 1
+    drop_menu_search: 1
+    drop_menu_user_info: 1
+    tab_bar: 1
+    tab_bar_kpi: 1
+    tab_bar_analyse: 1
+    tab_bar_app: 1
+    tab_bar_message: 1
+    subject_comment: 1
+    subject_share: 1
+    dashboard_ad: 0
+  key_store:
+    path: 'key-store/shengyiplus.jks'
+    password: '123456'
+    alias: 'shengyiplus'
+    alias_password: '123456'
+  server: 'https://shengyiplus.com'
+  pgyer:
+    shortcut: 'shengyiplus-a'
+    ios: '3445bd5b17c8a671819c1f1445127a1d'
+    android: '38e630134f0ca8098aeffe13d52ad5b6'
+    <<: *pgyer
+  umeng:
+    ios:
+      app_key: '56fb3e46e0f55ad04a00084a'
+      app_master_secret: 'etz5b0t7rjljnyizljanoezxjeffeqlb'
+    android:
+      app_key: '5705c952e0f55a391a0011cc'
+      umeng_message_secret: '2e4260da6ddedf736b3e67aceb4c8893'
+      app_master_secret: 'gphaheskgnxet1w65ncoox6pq27nxkm6'
+  umeng_weixin:
+    ios:
+      app_id: 'wx9161b0fbb0bcd2eb'
+      app_secret: 'c20290e236989166672d351a91f1f3f2'
+    android:
+      app_id: 'wx0ad40e5c84419ce2'
+      app_secret: 'fac49cd8a126145d7b0bd528306298d8'
+qiyoutong:
+  app_code: 'qiyoutong'
+  slogan_text: '企业邮箱畅通否'
+  application_id: 'com.intfocus.qiyoutong'
+  display_status:
+    drop_menu_scan: 0
+    drop_menu_voice: 0
+    drop_menu_search: 1
+    drop_menu_user_info: 1
+    tab_bar: 0
+    tab_bar_kpi: 0
+    tab_bar_analyse: 0
+    tab_bar_app: 0
+    tab_bar_message: 0
+    subject_comment: 0
+    subject_share: 1
+    dashboard_ad: 0
+  key_store:
+    path: 'key-store/qiyoutong.jks'
+    password: '123456'
+    alias: 'qiyoutong'
+    alias_password: '123456'
+  server: 'https://qiyoutong.shengyiplus.com'
+  pgyer:
+    shortcut: 'qiyoutong-a'
+    ios: '47b23691a94c0175f791c66df8d168b7'
+    android: '0ef200a70b862d4634af7d5d7ef5e93a'
+    <<: *pgyer
+  umeng:
+    ios:
+      app_key: '574aa43b67e58ec7280022b5'
+      app_master_secret: 'pjsaanvpjzmm2cyxum7et8bvkd6r0d25'
+    android:
+      app_key: '574aa3c2e0f55abe55000cd8'
+      umeng_message_secret: 'cef8d8b59d00aa61066836d2fd963bbd'
+      app_master_secret: 'fzpcgmbs7atwcp2pggpwaavclaximpwz'
+  umeng_weixin:
+    ios:
+      app_id: 'wxaedb8945bde9df1d'
+      app_secret: '723ed1ee9b3653d30726363d9ea143c8'
+    android:
+      app_id: 'wx029056555a87181f'
+      app_secret: '7f53a5808c4542714d6450ffbc89e15c'
+yhdev:
+  app_code: 'yhdev'
+  slogan_text: '永辉开发'
+  application_id: 'com.intfocus.yhdev'
+  display_status:
+    drop_menu_scan: 0
+    drop_menu_voice: 0
+    drop_menu_search: 1
+    drop_menu_user_info: 1
+    tab_bar: 0
+    tab_bar_kpi: 0
+    tab_bar_analyse: 0
+    tab_bar_app: 0
+    tab_bar_message: 0
+    subject_comment: 0
+    subject_share: 1
+    dashboard_ad: 0
+  key_store:
+    path: 'key-store/yh-dev.jks'
+    password: '123456'
+    alias: 'yh-dev'
+    alias_password: '123456'
+  server: 'http://yonghui-dev.idata.mobi'
+  pgyer:
+    shortcut: 'qiyoutong-a'
+    ios: '47b23691a94c0175f791c66df8d168b7'
+    android: 'd4eaa112b6713a256b1442dd9c078c2d'
+    <<: *pgyer
+  umeng:
+    ios:
+      app_key: '574aa43b67e58ec7280022b5'
+      app_master_secret: 'pjsaanvpjzmm2cyxum7et8bvkd6r0d25'
+    android:
+      app_key: '5993ec76310c931d82000bb6'
+      umeng_message_secret: '5db40171b505cc5f14373a9607b4aeb1'
+      app_master_secret: 'cggubedtamr2clcpirvrqn1zsgyczfpj'
+  umeng_weixin:
+    ios:
+      app_id: 'wxaedb8945bde9df1d'
+      app_secret: '723ed1ee9b3653d30726363d9ea143c8'
+    android:
+      app_id: 'wx029056555a87181f'
+      app_secret: '7f53a5808c4542714d6450ffbc89e15c'

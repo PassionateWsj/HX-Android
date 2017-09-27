@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:background="@color/text_white"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/background" />
+
+    <ImageView
+        android:id="@+id/iv_check"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_line"
+        android:src="@drawable/btn_unselected" />
+
+    <TextView
+        android:id="@+id/tv_column"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_line"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/iv_check"
+        android:gravity="center_vertical"
+        android:text="字段1"
+        android:textColor="@color/co3"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_key_column"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_line"
+        android:layout_toLeftOf="@+id/iv_marker"
+        android:gravity="center_vertical"
+        android:text="已选为关键列"
+        android:textColor="@color/co1"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/iv_marker"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/view_line"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/btn_pushpin2" />
+
+</RelativeLayout>

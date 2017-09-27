@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/co8_syr"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="244dp"
+        android:id="@+id/iv_guide_screenshot"
+        android:layout_height="598dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/pic_phone1"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_guide_describe"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/co10_syr">
+
+        <ImageView
+            android:id="@+id/iv_guide_text"
+            android:layout_width="172dp"
+            android:layout_height="56dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/text_gaikuan"/>
+
+        <LinearLayout
+            android:id="@+id/ll_guide_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_guide_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/icon_paging1"/>
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/icon_paging2"/>
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:background="@drawable/icon_paging2"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_guide_enter"
+            android:layout_width="150dp"
+            android:layout_height="52dp"
+            android:layout_below="@id/iv_guide_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/btn_enter"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_above="@id/rl_guide_describe"
+        android:background="@drawable/pic_shadow"/>
+
+</RelativeLayout>

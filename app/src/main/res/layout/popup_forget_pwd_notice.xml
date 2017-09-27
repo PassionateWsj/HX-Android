@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#4d2c3841">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/co10_syr"
+            android:gravity="center"
+            android:text="温馨提示"
+            android:textColor="@color/co6_syr"
+            android:textSize="16sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/co8_syr"/>
+
+        <TextView
+            android:id="@+id/tv_forget_pwd_notice_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/co10_syr"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="用户不存在，找平台申请开通帐号！"
+            android:textColor="@color/co3_syr"
+            android:textSize="13sp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/co8_syr"/>
+
+        <TextView
+            android:id="@+id/tv_forget_pwd_notice_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/color_btn_forget_pwd_submit_background"
+            android:gravity="center"
+            android:text="我知道了"
+            android:textColor="@color/co1_syr"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

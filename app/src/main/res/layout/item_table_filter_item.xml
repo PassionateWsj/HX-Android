@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_filter_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_square_black_boder_white"
+    android:gravity="center_vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_check_all"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/all_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/row_height_img_selected" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/all_check"
+            android:text="全选"
+            android:textColor="@color/co3"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_check"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rl_check_all"
+        android:src="@drawable/row_height_img_selected" />
+
+    <TextView
+        android:id="@+id/tv_filter_name"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rl_check_all"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/image_check"
+        android:gravity="center_vertical"
+        android:text="1"
+        android:textColor="@color/co3"
+        android:textSize="14dp" />
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ====================================================================================== -->
+    <!-- =======================================以下为控件尺寸、字体大小============================== -->
+    <!-- ====================================================================================== -->
+    <!-- =======================================默认尺寸============================== -->
+    <dimen name="size_default">40dp</dimen>
+    <dimen name="size_default_small">32dp</dimen>
+    <dimen name="size_default_xsmall">44dp</dimen>
+    <dimen name="size_default_medium">46dp</dimen>
+    <dimen name="size_default_large">50dp</dimen>
+    <dimen name="size_default_xlarge">60dp</dimen>
+    <dimen name="size_default_xxlarge">80dp</dimen>
+    <dimen name="size_default_large_s">70dp</dimen>
+    <!-- =======================================字体尺寸============================== -->
+    <!-- 默认大小 -->
+    <dimen name="font_default">14sp</dimen>
+    <!-- 大标题 -->
+    <dimen name="font_large_s">20sp</dimen>
+    <dimen name="font_large_ls">30sp</dimen>
+    <dimen name="font_large_xs">36sp</dimen>
+    <!-- 大标题 -->
+    <dimen name="font_large">18sp</dimen>
+    <!-- 小标题 -->
+    <dimen name="font_medium">16sp</dimen>
+    <!-- 副标题 -->
+    <dimen name="font_small">12sp</dimen>
+    <!-- 副标题 -->
+    <dimen name="font_small_m">10sp</dimen>
+    <!-- 所有内容 -->
+    <dimen name="font_cont">14sp</dimen>
+    <!-- =======================================分割线尺寸============================== -->
+    <!-- 水平分割线的高度 -->
+    <dimen name="dividers_height_default">10dp</dimen>
+    <dimen name="dividers_height_small_s">1px</dimen>
+    <dimen name="dividers_height_small">4px</dimen>
+    <dimen name="dividers_height_medium">16px</dimen>
+    <dimen name="dividers_height_large">20px</dimen>
+    <!-- ====================================================================================== -->
+    <!-- =======================================以上为控件尺寸、字体大小============================== -->
+    <!-- ====================================================================================== -->
+    <!--  -->
+    <!-- ====================================================================================== -->
+    <!-- =======================================以下为控件的内外边距================================== -->
+    <!-- ====================================================================================== -->
+    <dimen name="space_default">10dp</dimen>
+    <dimen name="space_default_large_s">20dp</dimen>
+    <dimen name="space_default_large">16dp</dimen>
+    <dimen name="space_default_medium">12dp</dimen>
+    <dimen name="space_default_small">6dp</dimen>
+    <dimen name="space_default_small_s">4dp</dimen>
+    <dimen name="space_float">24dp</dimen>
+    <!-- ====================================================================================== -->
+    <!-- =======================================以上为控件的内外边距================================== -->
+    <!-- ====================================================================================== -->
+</resources>

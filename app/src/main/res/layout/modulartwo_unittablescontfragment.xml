@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="200dp"
+    android:orientation="vertical">
+
+    <!--    <include
+            layout="@layout/item_suspension"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_default_medium" />-->
+
+
+    <FrameLayout
+        android:id="@+id/fl_tableTitle_container"
+        android:layout_width="match_parent"
+        android:layout_height="46dp" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/co10"
+            android:minHeight="@dimen/size_default_xxlarge"
+            android:orientation="vertical"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <com.intfocus.hx.view.NotScrollListView
+                    android:id="@+id/nslistView_unit_table_LineName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:dividerHeight="1px" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/co9" />
+
+                <com.intfocus.hx.view.OldTableHorizontalScrollView
+                    android:id="@+id/thscroll_unit_table_data"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:fillViewport="true"
+                    android:scrollbars="none">
+
+                    <FrameLayout
+                        android:id="@+id/fl_tableValue_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.intfocus.hx.view.OldTableHorizontalScrollView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

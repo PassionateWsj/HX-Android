@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_kpi_number_three"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="@color/co9_syr"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="115dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_number_three_compare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:text="0.77"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/tv_number_three_compare_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_number_three_compare"
+                android:layout_centerHorizontal="true"
+                android:text="周同比增长率"
+                android:textColor="@color/co4_syr"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:background="@color/co9_syr"
+            android:layout_gravity="center_vertical">
+        </View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_number_three_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="28dp"
+                android:text="小店销售概况"
+                android:textColor="@color/co6_syr"
+                android:textStyle="bold"
+                android:textSize="16dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="28dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/tv_number_three_sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="小店品类周销售额"
+                    android:textColor="@color/co3_syr"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_number_three_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="123456"
+                    android:textColor="@color/co15_syr"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_number_three_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_number_three_main"
+                    android:layout_toRightOf="@+id/tv_number_three_main"
+                    android:text="万元"
+                    android:textColor="@color/co15_syr"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

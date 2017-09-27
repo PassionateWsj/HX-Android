@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_input_barcode_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/co5_syr">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <ImageView
+                android:id="@+id/iv_input_barcode_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/nav_wback"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="手动输入券号"
+                android:textColor="@color/co10_syr"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/et_input_barcode"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/bg_et_input_barcode"
+            android:gravity="center"
+            android:inputType="number"
+            android:letterSpacing="0.1"
+            android:textColor="@color/co10"
+            android:textCursorDrawable="@drawable/cursor_input_barcode"
+            android:textSize="40sp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_btn_input_barcode_light_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cb_input_barcode_light"
+                android:layout_width="57dp"
+                android:layout_height="57dp"
+                android:background="@drawable/selector_btn_light"
+                android:button="@null"
+                android:checked="false"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/tv_input_barcode_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="打开手电筒"
+                android:textColor="@color/co10_syr"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_input_barcode_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/color_btn_forget_pwd_submit_background"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="@color/co1_syr"
+        android:textSize="16sp"/>
+</RelativeLayout>

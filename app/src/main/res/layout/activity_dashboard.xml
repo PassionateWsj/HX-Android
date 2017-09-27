@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".dashboard.DashboardActivity">
+
+    <LinearLayout
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/co10_syr"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <com.intfocus.hx.view.TabView
+            android:id="@+id/tab_kpi"
+            style="@style/ToolBarTab"
+            app:active_src="@drawable/tab_overview_s"
+            app:src="@drawable/tab_overview"
+            app:text="生意概况"/>
+
+        <com.intfocus.hx.view.TabView
+            android:id="@+id/tab_analysis"
+            style="@style/ToolBarTab"
+            app:active_src="@drawable/tab_form_s"
+            app:src="@drawable/tab_form"
+            app:text="报表" />
+
+        <com.intfocus.hx.view.TabView
+            android:id="@+id/tab_app"
+            style="@style/ToolBarTab"
+            app:active_src="@drawable/tab_special_s"
+            app:src="@drawable/tab_special"
+            app:text="工具箱" />
+
+        <com.intfocus.hx.view.TabView
+            android:id="@+id/tab_message"
+            style="@style/ToolBarTab"
+            app:active="false"
+            app:active_src="@drawable/tab_my_s"
+            app:src="@drawable/tab_my"
+            app:text="我的" />
+
+    </LinearLayout>
+
+    <com.intfocus.hx.view.NoScrollViewPager
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/toolBar">
+    </com.intfocus.hx.view.NoScrollViewPager>
+
+    <View
+        android:id="@+id/view_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_above="@+id/toolBar"
+        android:background="@drawable/pic_shadow"
+        android:visibility="gone"/>
+
+</RelativeLayout>

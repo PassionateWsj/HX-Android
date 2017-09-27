@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_tableValue_row"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_default_small"
+    android:gravity="center_vertical">
+
+</TableRow>

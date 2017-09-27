@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp">
+
+    <TextView
+        android:id="@+id/item_address_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="13.3dp"
+        android:paddingTop="13.3dp"
+        android:text="上海"
+        android:textColor="@color/co6_syr"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/item_address_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/ic_right"
+        android:visibility="visible" />
+</LinearLayout>
+

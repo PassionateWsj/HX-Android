@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_business_overview"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@color/co10_syr"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+    <LinearLayout
+        android:id="@+id/ll_number_compare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:gravity="bottom">
+
+        <TextView
+            android:id="@+id/tv_number_compare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="74dp"
+            android:textColor="@color/co2_syr"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_number_compare_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_number_compare"
+            android:layout_toRightOf="@+id/tv_number_compare"
+            android:maxLines="1"
+            android:text="%"
+            android:textColor="@color/co2_syr"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_number_compare_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_number_compare"
+        android:layout_marginLeft="28dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxWidth="87dp"
+        android:textColor="@color/co4_syr"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/view_vertical"
+        android:layout_width="0.5dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="115dp"
+        android:background="@color/co9_syr" />
+
+
+    <TextView
+        android:id="@+id/tv_number_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/view_vertical"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/co6_syr"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_number_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_number_compare"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/view_vertical"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/co3_syr"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_number_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_number_compare"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@+id/tv_number_sub"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/co15_syr"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_number_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_number_compare"
+        android:layout_toRightOf="@+id/tv_number_main"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/co15_syr"
+        android:textSize="12sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/co9_syr" />
+</RelativeLayout>
+
+

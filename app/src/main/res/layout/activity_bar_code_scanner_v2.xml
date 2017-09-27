@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.intfocus.hx.scanner.BarCodeScannerActivity">
+
+    <View
+        android:id="@+id/barcode_top_reference"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <cn.bingoogolapple.qrcode.zbar.ZBarView
+        android:id="@+id/zbarview_barcode_scanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:qrcv_animTime="1000"
+        app:qrcv_barCodeTipText="扫一扫商品上的条码，可自动识别"
+        app:qrcv_borderColor="@android:color/white"
+        app:qrcv_borderSize="1dp"
+        app:qrcv_cornerColor="@color/co7_syr"
+        app:qrcv_cornerLength="20dp"
+        app:qrcv_cornerSize="3dp"
+        app:qrcv_customScanLineDrawable="@drawable/scan_line"
+        app:qrcv_isBarcode="false"
+        app:qrcv_isShowDefaultScanLineDrawable="false"
+        app:qrcv_isShowTipTextAsSingleLine="true"
+        app:qrcv_isTipTextBelowRect="true"
+        app:qrcv_maskColor="#3F000000"
+        app:qrcv_rectWidth="200dp"
+        app:qrcv_tipTextColor="@color/co4_syr"
+        app:qrcv_tipTextMargin="24dp"
+        app:qrcv_tipTextSize="15sp"
+        app:qrcv_toolbarHeight="44dp"
+        app:qrcv_topOffset="98dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_barcode_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/nav_wback"/>
+
+            <TextView
+                android:id="@+id/tv_barcode_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="相册"
+                android:textColor="@color/color_btn_bar_code_gallery"
+                android:textSize="15sp"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="扫描条码"
+                android:textColor="@color/co10_syr"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="230dp"
+            android:src="@drawable/scan_focus"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp">
+
+            <LinearLayout
+                android:id="@+id/ll_btn_input_bar_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_input_bar_code"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:background="@drawable/btn_manual2"
+                    android:clickable="false"/>
+
+                <TextView
+                    android:id="@+id/tv_barcode_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="手动输入"
+                    android:textColor="@color/co10_syr"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_btn_light_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="118dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/cb_barcode_light"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:background="@drawable/selector_btn_light"
+                    android:button="@null"
+                    android:checked="false"
+                    android:clickable="false"/>
+
+                <TextView
+                    android:id="@+id/tv_barcode_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:text="打开手电筒"
+                    android:textColor="@color/co10_syr"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_barcode_scanning"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/co10_syr_60"
+        android:clickable="false"
+        android:gravity="center"
+        android:text="正在扫描..."
+        android:visibility="gone"/>
+</FrameLayout>

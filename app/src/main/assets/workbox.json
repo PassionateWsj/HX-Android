@@ -1,0 +1,48 @@
+{
+  "code": 200,
+  "message": "获取数据成功",
+  "data": [
+    {
+      "id": 6,
+      "name": "扫码",
+      "report_title": "扫码",
+      "category": "1",
+      "group_name": "扫码",
+      "link_path": "/mobile/v2/group/%@/template/2/report/74",
+      "template_id": "10",
+      "obj_id": "74",
+      "obj_title": "扫码",
+      "obj_link": "/mobile/v2/group/%@/template/2/report/74",
+      "publicly": false,
+      "icon": "icon-icon_caiwuyiti.png",
+      "icon_link": "http://hxicon.oss-cn-hangzhou.aliyuncs.com/%E6%89%AB%E7%A0%81.png",
+      "group_id": 6,
+      "health_value": 0,
+      "group_order": null,
+      "item_order": null,
+      "option_user_num": "user_num",
+      "created_at": "2017-08-24T17:04:13.000+08:00"
+    },
+    {
+      "id": 151,
+      "name": "帮助",
+      "report_title": "帮助",
+      "category": "-1",
+      "group_name": "帮助",
+      "link_path": "/mobile/v2/group/%@/template/2/report/105",
+      "template_id": "2",
+      "obj_id": "105",
+      "obj_title": "帮助",
+      "obj_link": "/mobile/v2/group/%@/template/2/report/105",
+      "publicly": false,
+      "icon": "icon-商行赛马.png",
+      "icon_link": "http://hxicon.oss-cn-hangzhou.aliyuncs.com/%E4%BD%BF%E7%94%A8%E5%B8%AE%E5%8A%A91.png",
+      "group_id": 151,
+      "health_value": 0,
+      "group_order": null,
+      "item_order": null,
+      "option_user_num": "user_num",
+      "created_at": "2017-08-13T15:09:36.000+08:00"
+    }
+  ]
+}

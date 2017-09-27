@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                style="@style/SettingGroup"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/item_setting_key"
+        style="@style/SettingKey"
+        android:text="标题"/>
+
+
+    <ImageView
+        android:id="@+id/item_setting_arrow"
+        style="@style/SettingArrow"/>
+
+    <TextView
+        android:id="@+id/item_setting_info"
+        style="@style/SettingValue"
+        android:layout_marginRight="12dp"
+        android:layout_toLeftOf="@id/item_setting_arrow"
+        android:text="内容"
+        android:textColor="@color/gray"/>
+
+    <View
+        style="@style/OptionSettingDivider"/>
+</RelativeLayout>

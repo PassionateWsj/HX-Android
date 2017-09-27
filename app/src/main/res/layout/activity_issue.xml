@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/actionBar">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                style="@style/BannerBackButton"
+                android:onClick="dismissActivity"/>
+
+            <TextView
+                style="@style/BannerBackText"
+                android:layout_toRightOf="@id/iv_back"
+                android:onClick="dismissActivity"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/BannerTitle"
+                android:text="生意人反馈收集"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+
+        <View style="@style/SmallDivider"/>
+
+        <LinearLayout
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/background_issue"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="330dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/user_info_base">
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_issue_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="生意人问题反馈"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="遇到问题了?很抱歉生意人给您带来了不好的体验,请您把遇到的问题反馈给我们,永辉生意人测试团队会尽快改进哦~"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+
+            <View
+                style="@style/SmallDivider"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="问题描述及改进意见"
+                android:textColor="@color/black"
+                android:textSize="13sp"/>
+
+            <RelativeLayout
+                android:layout_width="303dp"
+                android:layout_height="107dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_issue_content">
+
+                <EditText
+                    android:id="@+id/et_issue_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:hint="问题描述请直戳要点~如能附上具体操作步骤更佳,万分感谢!"
+                    android:textSize="12sp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="问题截图"
+                android:textColor="@color/black"
+                android:textSize="13sp"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_issue_img"
+                android:layout_width="303dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_issue_img">
+
+                <TextView
+                    android:id="@+id/tv_issue_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="请将你遇到问题的页面截图上传, 最多三张哦!"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"/>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_img_1"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_img_2"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"/>
+
+                    <ImageView
+                        android:id="@+id/iv_img_3"
+                        android:layout_width="50dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_add_img"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/btn_add_black"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_issue_commit"
+                android:layout_width="306dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/user_info_base">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="提交"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+
+

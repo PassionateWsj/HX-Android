@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#50000000">
+
+    <LinearLayout
+        android:id="@+id/ll_popup_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/co10_syr"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_logout_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/color_btn_forget_pwd_submit_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="确认退出"
+                android:textColor="@color/co11_syr"
+                android:textSize="16sp"/>
+
+            <View
+                style="@style/OptionSettingDivider"
+                android:layout_height="5dp"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/color_btn_forget_pwd_submit_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="取消"
+                android:textColor="@color/co3_syr"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_popup_logout_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_popup_logout">
+    </RelativeLayout>
+</RelativeLayout>

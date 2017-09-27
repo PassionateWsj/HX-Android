@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- =======================================默认颜色============================== -->
+    <color name="argb_theme_press">#91c941</color>
+    <color name="argb_theme_default">#51aa38</color>
+    <color name="argb_theme_StatusBarColor">#ffffff</color>
+    <color name="argb_theme_StatusBarButtonColor">#00a4e9</color>
+    <color name="argb_gray">#f3f3f3</color>
+    <color name="argb_white">#ffffff</color>
+    <color name="argb_black">#000000</color>
+    <color name="argb_black_1d">#1d1d1d</color>
+    <color name="argb_transparent">#00000000</color>
+    <color name="argb_background">#eeeff1</color>
+    <color name="argb_bg_masking">#88a1a1a1</color>
+    <color name="argb_bg_start">#df969e</color>
+    <!-- =======================================字体颜色=============================== -->
+    <color name="argb_font_hint">#5c5c5c</color>
+    <color name="argb_font_gray">#878787</color>
+    <color name="argb_font_red">#CC5968</color>
+    <color name="argb_font_7d">#7d7d7d</color>
+    <color name="argb_font_d7">#d7d7d7</color>
+    <color name="argb_font_89">#898989</color>
+    <color name="argb_font_46">#464646</color>
+    <color name="argb_font_c3">#c3c3c3</color>
+    <color name="argb_font_94">#949494</color>
+    <color name="argb_font_orange">#d57b29</color>
+    <color name="argb_font_orange_time">#e57819</color>
+    <color name="argb_font_orange_number">#e67817</color>
+    <color name="argb_font_yellow">#E5CA37</color>
+    <color name="argb_font_yellow_cursor">#efb54e</color>
+    <color name="argb_font_red_bg1">#d65550</color>
+    <color name="argb_font_red_bg2">#c53a37</color>
+    <!-- 所有文段标题颜色 -->
+    <color name="argb_font_default">#595b57</color>
+    <!-- 所有正文内容颜色 -->
+    <color name="argb_font_cont">#bcbcbc</color>
+    <color name="argb_font_cont_333">#333333</color>
+    <!-- 验证码灰色 -->
+    <color name="argb_bg_grey_c4">#c4c4c4</color>
+    <color name="argb_bg_grey_4">#444444</color>
+    <color name="argb_bg_grey_a4">#88444444</color>
+    <!-- =======================================分割线颜色============================== -->
+    <color name="argb_border">#f8f8f8</color>
+    <color name="argb_devider">#e6e6e6</color>
+    <!-- ============================================================================= -->
+    <!-- ================================================================================ -->
+
+</resources>

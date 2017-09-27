@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:id="@+id/ll_issue_list_item"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <View style="@style/SmallDivider"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="13dp">
+
+        <ImageView
+            android:id="@+id/iv_issue_item_point"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/list_ic_sign"/>
+
+            <TextView
+                android:id="@+id/tv_issue_item_title"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/iv_issue_item_point"
+                style="@style/tv_notice_List_title_item"
+                android:text="系统公告"
+                android:textSize="13sp"
+                android:textStyle="normal"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_issue_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="5dp"
+        android:text="2017-06-12 05:47:55"
+        android:textSize="11sp"
+        android:textColor="@color/gray"/>
+</LinearLayout>

@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.intfocus.hx.view.RootScrollView
+        android:id="@+id/rootScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/fl_mdetal_title_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_default_medium"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:animateLayoutChanges="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="1dp" />
+
+            <FrameLayout
+                android:id="@+id/fl_mdetal_cont_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--<RadioButton-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/selector_mdetal_rbtn"-->
+            <!--android:checked="true"-->
+            <!--android:text="11111111111111111111"-->
+            <!--android:textColor="@color/color_mdetal_rbtn"-->
+            <!--tools:layout_editor_absoluteX="0dp"-->
+            <!--tools:layout_editor_absoluteY="200dp" />-->
+
+
+        </LinearLayout>
+    </com.intfocus.hx.view.RootScrollView>
+
+    <FrameLayout
+        android:id="@+id/fl_mdetal_top_suspend_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>

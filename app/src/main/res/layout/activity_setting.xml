@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/co8_syr"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/TitleStyle"
+        android:layout_width="match_parent">
+
+        <ImageView
+            style="@style/BackStyle"
+            android:onClick="dismissActivity"/>
+
+        <TextView
+            android:id="@+id/bannerTitle"
+            style="@style/TitleText"
+            android:text="设置"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_setting"
+        style="@style/lv_setting_act"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"/>
+
+</LinearLayout>

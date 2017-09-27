@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            style="@style/BannerBackButton"
+            android:onClick="dismissActivity"/>
+
+        <TextView
+            style="@style/BannerBackText"
+            android:layout_toRightOf="@id/iv_back"
+            android:onClick="dismissActivity"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/BannerTitle"
+            android:text="生意人反馈收集"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+    </RelativeLayout>
+
+    <View style="@style/SmallDivider"/>
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="523dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/background_base_rectangle">
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc_issue_list"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <View style="@style/SmallDivider"/>
+
+        <LinearLayout
+            android:id="@+id/ll_issue_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/btn_add"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="新增反馈"
+                android:textColor="@color/black"
+                android:textSize="8sp"/>
+        </LinearLayout>
+
+        <View style="@style/SmallDivider"/>
+    </LinearLayout>
+
+
+</LinearLayout>

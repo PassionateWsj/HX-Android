@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/ll_store_selector_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".CommentActivity">
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/actionBar">
+
+        <ImageView
+            android:id="@+id/bannerBack"
+            style="@style/BannerBackButton"
+            android:onClick="backPress"/>
+
+        <TextView
+            android:id="@+id/bannerTitle"
+            style="@style/BannerTitle"
+            android:text="筛选列表"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionBar">
+
+        <LinearLayout
+            android:id="@+id/llStoreSearchView"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/scanner_search"/>
+
+            <EditText
+                android:id="@+id/storeSearchView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="10"
+                android:background="@color/white"
+                android:hint="搜索"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/tv_store_selector_search"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="搜索"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/store_list_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llStoreSearchView"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lightgray"
+                android:padding="5dp"
+                android:text="已选项"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/store_item_select"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:onClick="dismissActivity"
+                android:padding="12dp"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lightgray"
+                android:padding="5dp"
+                android:text="所有选项"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listStores"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/store_list_head">
+        </ListView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

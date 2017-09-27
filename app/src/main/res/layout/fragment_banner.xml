@@ -1,0 +1,51 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="@dimen/space_default"
+             android:background="@drawable/shadow_banner_border"
+             tools:context="com.intfocus.hx.subject.template_v2.ModularTwo_UnitBannerModeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_default_xsmall"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_float">
+
+        <TextView
+            android:id="@+id/tv_mdrp_unit_banner_title"
+            style="@style/tv_mererMinTitle_stytle"
+            android:paddingRight="10dp"
+            android:text="title"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_mdrp_unit_banner_time"
+            style="@style/tv_mererMinTitle_stytle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/tv_mdrp_unit_banner_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.454"/>
+
+        <ImageButton
+            android:id="@+id/imgb_mdrp_unit_banner_info"
+            android:layout_width="@dimen/size_default_small"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="@dimen/space_float"
+            android:layout_marginTop="0dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_inf"/>
+
+    </LinearLayout>
+</FrameLayout>

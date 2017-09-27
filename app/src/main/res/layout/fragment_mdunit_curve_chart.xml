@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/space_default"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/space_default_large_s"
+        android:paddingBottom="@dimen/space_default_large_s"
+        android:paddingLeft="@dimen/space_float"
+        android:paddingRight="@dimen/space_float">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_chart_table_xlabel"
+                style="@style/tv_unit_chart_m" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_default_large"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/tv_chart_table_target1"
+                style="@style/tv_unit_chart_x"/>
+
+            <TextView
+                android:id="@+id/tv_chart_table_target2"
+                style="@style/tv_unit_chart_x" />
+
+            <TableRow style="@style/tv_unit_chart_x">
+
+                <TextView
+                    android:id="@+id/tv_chart_table_rate"
+                    style="@style/tv_unit_chart_x"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:paddingRight="@dimen/space_default_small_s" />
+
+                <com.intfocus.hx.view.RateCursor
+                    android:id="@+id/img_RateCursor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_chart_table_target1name"
+                android:textSize="12sp"
+                style="@style/tv_unit_chart_m" />
+
+            <TextView
+                android:id="@+id/tv_chart_table_target2name"
+                android:textSize="12sp"
+                style="@style/tv_unit_chart_m" />
+
+            <TextView
+                style="@style/tv_unit_chart_m"
+                android:textSize="12sp"
+                android:text="变化率" />
+        </TableRow>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mdrpUnit_curvechart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/space_float"
+        android:layout_marginRight="@dimen/space_float"
+        android:orientation="vertical" />
+</LinearLayout>

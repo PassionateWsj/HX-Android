@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/size_default_xsmall"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/TitleStyle"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/tv_baseUI_back"
+            style="@style/BackStyle"/>
+
+        <LinearLayout
+            android:id="@+id/ll_baseUI_title_RightView"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/nav_more"
+            android:onClick="launchDropMenuActivity"
+            android:orientation="horizontal"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/tv_baseUI_title"
+            style="@style/TitleText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/ll_baseUI_title_RightView"
+            android:layout_toRightOf="@id/tv_baseUI_back"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="报表"/>
+    </RelativeLayout>
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@color/co10_syr">-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_baseUI_title_LeftView"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="2"-->
+    <!--android:clipChildren="false">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_baseUI_back"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@color/argb_transparent"-->
+    <!--android:drawableLeft="@drawable/icon_back"-->
+    <!--android:drawablePadding="@dimen/space_default_small_s"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:maxLines="1"-->
+    <!--android:paddingLeft="@dimen/space_default_small"-->
+    <!--android:text="返回"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/font_large" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_baseUI_title"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_marginBottom="@dimen/space_default_small"-->
+    <!--android:layout_marginTop="@dimen/space_default_small"-->
+    <!--android:layout_weight="6"-->
+    <!--android:ellipsize="marquee"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"-->
+    <!--android:gravity="center"-->
+    <!--android:marqueeRepeatLimit="marquee_forever"-->
+    <!--android:maxLines="1"-->
+    <!--android:textColor="@android:color/white"-->
+    <!--android:textSize="@dimen/font_large" />-->
+    <!---->
+    <!--</LinearLayout>-->
+
+</LinearLayout>

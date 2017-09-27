@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_kpi_notice"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/co6_syr"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="16dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/icon_news" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text="[推荐]"
+        android:textColor="@color/co7_syr"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_notice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:ellipsize="end"
+        android:gravity="center|left"
+        android:maxLines="1"
+        android:text="生意人功能说明"
+        android:textColor="@color/co10_syr"
+        android:textSize="13sp" />
+
+</LinearLayout>

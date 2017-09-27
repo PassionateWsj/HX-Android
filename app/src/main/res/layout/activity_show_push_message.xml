@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context="com.intfocus.hx.dashboard.mine.activity.ShowPushMessageActivity">
+
+    <RelativeLayout
+        style="@style/TitleStyle"
+        android:layout_width="match_parent">
+
+        <ImageView
+            style="@style/BackStyle"
+            android:onClick="back"/>
+
+        <TextView
+            style="@style/TitleText"
+            android:text="消息"/>
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rv_show_push_message"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

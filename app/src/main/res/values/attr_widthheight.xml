@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 可以设置宽高比的RelativeLayout -->
+    <declare-styleable name="WidthHeightFrameLayout">
+        <attr name="width_weight" format="float" />
+        <attr name="extract_width" format="dimension" />
+        <attr name="height_weight" format="float" />
+        <attr name="extract_height" format="dimension" />
+    </declare-styleable>
+
+</resources>

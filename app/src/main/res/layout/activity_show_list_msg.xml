@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/co8_syr"
+              android:orientation="vertical"
+              tools:context="com.intfocus.hx.setting.ShowListMsgActivity">
+
+
+    <RelativeLayout
+        style="@style/TitleStyle"
+        android:layout_width="match_parent">
+
+        <ImageView
+            style="@style/BackStyle"
+            android:onClick="dismissActivity"/>
+
+        <TextView
+            android:id="@+id/bannerTitle"
+            style="@style/TitleText"
+            android:text="主题名称"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/pushListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionBar"
+        android:layout_marginTop="10dp"
+        android:background="@color/co10_syr"
+        android:divider="@null"/>
+
+</LinearLayout>

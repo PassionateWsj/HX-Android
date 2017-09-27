@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            style="@style/NullDivider"
+            android:layout_height="10dp"
+            android:layout_alignParentTop="true"/>
+
+        <include layout="@layout/item_mine_user_top"/>
+
+        <View
+            style="@style/SmallDivider"
+            android:layout_height="1px"/>
+
+        <!--单值-->
+        <include layout="@layout/items_single_value"></include>
+
+        <View
+            style="@style/NullDivider"
+            android:layout_height="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/co10_syr">
+
+            <ImageView
+                android:id="@+id/iv_mine_user_group"
+                style="@style/iv_mine_user_list"
+                android:src="@drawable/icon_section"/>
+
+            <TextView
+                android:id="@+id/tv_mine_user_group"
+                style="@style/tv_mine_user_list_left"
+                android:layout_toRightOf="@+id/iv_mine_user_group"
+                android:text="归属部门"/>
+
+            <TextView
+                android:id="@+id/tv_mine_user_group_value"
+                style="@style/tv_mine_user_list_right"
+                android:maxLines="2"
+                android:maxWidth="220dp"
+                android:text="YONGUED"/>
+        </RelativeLayout>
+
+        <View style="@style/NarrowSmallDivider"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/co10_syr">
+
+            <ImageView
+                android:id="@+id/iv_mine_user_num"
+                style="@style/iv_mine_user_list"
+                android:src="@drawable/login_jobno"/>
+
+            <TextView
+                android:id="@+id/tv_mine_user_num"
+                style="@style/tv_mine_user_list_left"
+                android:layout_toRightOf="@id/iv_mine_user_num"
+                android:text="工号"/>
+
+            <TextView
+                android:id="@+id/tv_mine_user_num_value"
+                style="@style/tv_mine_user_list_right"
+                android:text=""/>
+        </RelativeLayout>
+
+        <View
+            style="@style/NullDivider"
+            android:layout_height="10dp"
+            android:layout_alignParentTop="true"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_favorite"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/color_btn_forget_pwd_submit_background">
+
+            <ImageView
+                android:id="@+id/iv_mine_user_favorite"
+                style="@style/iv_mine_user_list"
+                android:src="@drawable/icon_collection"/>
+
+            <TextView
+                android:id="@+id/tv_mine_user_favorite"
+                style="@style/tv_mine_user_list_left"
+                android:layout_toRightOf="@id/iv_mine_user_favorite"
+                android:text="文章收藏"/>
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/btn_more"/>
+        </RelativeLayout>
+
+        <View style="@style/NarrowSmallDivider"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_message"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/color_btn_forget_pwd_submit_background">
+
+            <ImageView
+                android:id="@+id/iv_mine_user_message"
+                style="@style/iv_mine_user_list"
+                android:src="@drawable/icon_message"/>
+
+            <TextView
+                android:id="@+id/tv_mine_user_message"
+                style="@style/tv_mine_user_list_left"
+                android:layout_toRightOf="@id/iv_mine_user_message"
+                android:text="消息"/>
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/btn_more"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/NullDivider"
+            android:layout_height="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_setting"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/color_btn_forget_pwd_submit_background">
+
+            <ImageView
+                android:id="@+id/iv_mine_user_setting"
+                style="@style/iv_mine_user_list"
+                android:src="@drawable/icon_setting"/>
+
+            <TextView
+                android:id="@+id/tv_mine_user_setting"
+                style="@style/tv_mine_user_list_left"
+                android:layout_toRightOf="@+id/iv_mine_user_setting"
+                android:text="设置"/>
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/btn_more"/>
+        </RelativeLayout>
+
+        <View style="@style/NarrowSmallDivider"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_password_alter"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/color_btn_forget_pwd_submit_background">
+
+            <ImageView
+                android:id="@+id/iv_mine_user_password"
+                style="@style/iv_mine_user_list"
+                android:src="@drawable/icon_password"/>
+
+            <TextView
+                android:id="@+id/tv_mine_user_password"
+                style="@style/tv_mine_user_list_left"
+                android:layout_toRightOf="@id/iv_mine_user_password"
+                android:text="修改密码"/>
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/btn_more"/>
+        </RelativeLayout>
+
+        <View style="@style/NarrowSmallDivider"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_issue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/color_btn_forget_pwd_submit_background">
+
+            <ImageView
+                android:id="@+id/iv_mine_user_issue"
+                style="@style/iv_mine_user_list"
+                android:src="@drawable/icon_feedback"/>
+
+            <TextView
+                android:id="@+id/tv_mine_user_issue"
+                style="@style/tv_mine_user_list_left"
+                android:layout_toRightOf="@id/iv_mine_user_issue"
+                android:text="问题反馈"/>
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="12dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/btn_more"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/NullDivider"
+            android:layout_height="10dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_logout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/co10_syr">
+
+            <TextView
+                android:id="@+id/tv_mine_user_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="退出登录"
+                android:textColor="#f56758"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <View
+            style="@style/NullDivider"
+            android:layout_height="10dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
+

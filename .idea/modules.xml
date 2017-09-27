@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/HX-Android.iml" filepath="$PROJECT_DIR$/.idea/HX-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/HomeMetrics/HomeMetrics.iml" filepath="$PROJECT_DIR$/libs/HomeMetrics/HomeMetrics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/PushSDK/PushSDK.iml" filepath="$PROJECT_DIR$/libs/PushSDK/PushSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/android-pdfview/android-pdfview.iml" filepath="$PROJECT_DIR$/libs/android-pdfview/android-pdfview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/jgraph/jgraph.iml" filepath="$PROJECT_DIR$/libs/jgraph/jgraph.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/pull-to-refresh/pull-to-refresh.iml" filepath="$PROJECT_DIR$/libs/pull-to-refresh/pull-to-refresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/switchText/switchText.iml" filepath="$PROJECT_DIR$/libs/switchText/switchText.iml" />
+    </modules>
+  </component>
+</project>

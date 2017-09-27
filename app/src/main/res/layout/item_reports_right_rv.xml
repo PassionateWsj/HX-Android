@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:background="@color/color10"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_reports_right_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="帮助文档"
+        android:textColor="@color/co6_syr"
+        android:textSize="13sp"
+        android:textStyle="bold"/>
+
+    <com.intfocus.hx.view.MyGridView
+        android:id="@+id/gv_reports_right_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="23dp"
+        android:numColumns="3"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/co9_syr"/>
+
+</LinearLayout>

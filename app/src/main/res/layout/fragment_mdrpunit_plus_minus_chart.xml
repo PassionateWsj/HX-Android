@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/space_default"
+    android:background="@color/co10"
+    android:orientation="vertical"
+    tools:context="com.intfocus.hx.subject.template_v2.ui.ModularTwo_UnitPlusMinusChartFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_default_medium"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/space_default"
+        android:paddingRight="@dimen/space_default">
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical">
+
+            <com.intfocus.hx.view.SortCheckBox
+                android:id="@+id/cbox_name"
+                style="@style/tv_unit_chart_m"
+                android:layout_width="wrap_content"
+                android:drawablePadding="4dp"
+                android:paddingRight="0dp"
+                app:sort_downicon="@drawable/icon_sort_desc"
+                app:sort_noneicon="@drawable/icon_sort"
+                app:sort_upicon="@drawable/icon_sort_asc" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.2"
+            android:gravity="center_vertical">
+
+            <com.intfocus.hx.view.SortCheckBox
+                android:id="@+id/cbox_percentage"
+                style="@style/tv_unit_chart_m"
+                android:layout_width="wrap_content"
+                android:drawablePadding="4dp"
+                android:paddingRight="0dp"
+                app:sort_downicon="@drawable/icon_sort_desc"
+                app:sort_noneicon="@drawable/icon_sort"
+                app:sort_upicon="@drawable/icon_sort_asc" />
+        </TableRow>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/space_default"
+        android:background="@color/argb_devider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/space_default">
+
+        <com.intfocus.hx.view.NotScrollListView
+            android:id="@+id/lv_MDRPUnit_PlusMinusChart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:divider="@null"
+            android:orientation="vertical" />
+
+        <Space
+            android:layout_width="@dimen/space_default_small_s"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/fl_MDRPUnit_PlusMinusChart_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>
