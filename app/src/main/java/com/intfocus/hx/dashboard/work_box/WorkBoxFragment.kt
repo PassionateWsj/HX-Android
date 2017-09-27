@@ -2,6 +2,7 @@ package com.intfocus.hx.dashboard.work_box
 
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.support.v4.widget.SwipeRefreshLayout
@@ -28,6 +29,7 @@ import org.greenrobot.eventbus.ThreadMode
 class WorkBoxFragment: BaseModeFragment<WorkBoxMode>(), SwipeRefreshLayout.OnRefreshListener {
     var rootView : View? = null
     var datas: List<WorkBoxItem>? = null
+    lateinit var mUserSP: SharedPreferences
 
     override fun setSubject(): Subject {
         return WorkBoxMode(ctx)
@@ -39,6 +41,7 @@ class WorkBoxFragment: BaseModeFragment<WorkBoxMode>(), SwipeRefreshLayout.OnRef
             rootView = inflater!!.inflate(R.layout.fragment_work_box, container, false)
             model.requestData()
         }
+        mUserSP = ctx.getSharedPreferences("UserBean", Context.MODE_PRIVATE)
         return rootView
     }
 
@@ -75,6 +78,7 @@ class WorkBoxFragment: BaseModeFragment<WorkBoxMode>(), SwipeRefreshLayout.OnRef
             datas = request.workBoxDatas
             gv_work_box.adapter = WorkBoxAdapter(ctx, datas)
             tv_logout.setOnClickListener { showLogoutPopupWindow(ctx) }
+            tv_user_name.text = mUserSP.getString("user_num", "用户名")
         }
         swipe_container.isRefreshing = false
     }

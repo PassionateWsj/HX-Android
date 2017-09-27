@@ -906,14 +906,14 @@ public class WebApplicationActivity extends BaseActivity implements OnPageChange
             });
         }
 
-        @JavascriptInterface
-        public void toggleShowBannerMenu(final String state) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    iv_BannerSetting.setVisibility(state.equals("show") ? View.VISIBLE : View.GONE);
-                }
-            });
+            @JavascriptInterface
+            public void toggleShowBannerMenu(final String state) {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        iv_BannerSetting.setVisibility(state.equals("show") ? View.VISIBLE : View.GONE);
+                    }
+                });
         }
 
         @JavascriptInterface
