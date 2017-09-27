@@ -159,7 +159,7 @@ class BarCodeScannerActivity : AppCompatActivity(), QRCodeView.Delegate, View.On
             }
 
             isStartActivity = true
-            var link = "http://sm.andoner.cn/static/app/quan.html?" + "uid=" + mUserSP.getString("user_num", "") + "code=" + trim
+            var link = "http://sm.andoner.cn/static/app/quan.html?" + "uid=" + mUserSP.getString("user_num", "") + "&" + "code=" + trim
             val intent = Intent(this, WebApplicationActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
             intent.putExtra(URLs.kBannerName, "核销奖券")
@@ -220,7 +220,7 @@ class BarCodeScannerActivity : AppCompatActivity(), QRCodeView.Delegate, View.On
             return
         }
 
-        var link = "http://sm.andoner.cn/static/app/quan.html?" + "uid=" + mUserSP.getString("user_num", "") + "code=" + result
+        var link = "http://sm.andoner.cn/static/app/quan.html?" + "uid=" + mUserSP.getString("user_num", "") + "&" + "code=" + result
         val intent = Intent(this, WebApplicationActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
         intent.putExtra(URLs.kBannerName, "核销奖券")

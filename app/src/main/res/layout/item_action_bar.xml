@@ -34,5 +34,6 @@
         android:id="@+id/iv_banner_setting"
         style="@style/BannerRightButton"
         android:onClick="launchDropMenuActivity"
-        android:src="@drawable/nav_more"/>
+        android:src="@drawable/nav_more"
+        android:visibility="invisible"/>
 </RelativeLayout>
