@@ -78,7 +78,7 @@ class WorkBoxFragment: BaseModeFragment<WorkBoxMode>(), SwipeRefreshLayout.OnRef
             datas = request.workBoxDatas
             gv_work_box.adapter = WorkBoxAdapter(ctx, datas)
             tv_logout.setOnClickListener { showLogoutPopupWindow(ctx) }
-            tv_user_name.text = mUserSP.getString("user_num", "用户名")
+            tv_user_name.text = "用户名："+mUserSP.getString("user_num", "用户名")
         }
         swipe_container.isRefreshing = false
     }

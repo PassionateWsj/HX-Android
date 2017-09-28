@@ -31,6 +31,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -102,6 +103,7 @@ public class WebApplicationActivity extends BaseActivity implements OnPageChange
     private static final int CODE_RESULT_REQUEST = 0xa2;
     private static final int CODE_CAMERA_REQUEST = 0xa1;
     private static final int CODE_CAMERA_RESULT = 0xa0;
+    private FrameLayout mWebContainer;
 
     @Override
     @SuppressLint("SetJavaScriptEnabled")
@@ -124,7 +126,9 @@ public class WebApplicationActivity extends BaseActivity implements OnPageChange
         iv_BannerBack = (ImageView) findViewById(R.id.iv_banner_back);
         tv_BannerBack = (TextView) findViewById(R.id.tv_banner_back);
         iv_BannerSetting = (ImageView) findViewById(R.id.iv_banner_setting);
-        mWebView = (WebView) findViewById(R.id.browser);
+        mWebContainer = (FrameLayout) findViewById(R.id.browser);
+        mWebView = new WebView(this);
+        mWebContainer.addView(mWebView);
         initActiongBar();
         initWebAppWebView();
 

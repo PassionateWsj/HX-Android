@@ -12,13 +12,20 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/rl_action_bar">
 
-        <WebView
+        <FrameLayout
             android:id="@+id/browser"
             android:visibility="visible"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layerType="software"
-            android:layout_below="@id/actionBar" />
+            android:layout_below="@id/actionBar"
+            />
+        <!--<WebView-->
+            <!--android:id="@+id/browser"-->
+            <!--android:visibility="visible"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layerType="software"-->
+            <!--android:layout_below="@id/actionBar" />-->
 
         <RelativeLayout
             android:id="@+id/anim_loading"
