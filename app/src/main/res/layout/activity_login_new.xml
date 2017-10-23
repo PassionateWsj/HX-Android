@@ -5,7 +5,6 @@
     android:id="@+id/login_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg"
     android:gravity="center_horizontal"
     tools:context=".login.LoginActivity">
 
@@ -66,12 +65,13 @@
 
     <ImageView
         android:id="@+id/loginLog"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
         android:layout_above="@id/linearUsername"
+        android:scaleType="fitCenter"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="76dp"
-        android:background="@drawable/login_logo"/>
+        android:src="@drawable/logo"/>
 
     <LinearLayout
         android:id="@+id/linearPassword"
@@ -147,6 +147,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:visibility="gone"
         android:layout_marginBottom="40dp"
         android:orientation="horizontal">
 

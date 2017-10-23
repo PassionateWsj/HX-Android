@@ -6,7 +6,6 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Context
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
 import android.content.pm.PackageInfo
@@ -19,15 +18,14 @@ import android.support.v4.content.ContextCompat
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.KeyEvent
-import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.webkit.WebView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
-
 import com.intfocus.hx.R
+import com.intfocus.hx.base.BaseActivity.kVersionCode
 import com.intfocus.hx.dashboard.DashboardActivity
 import com.intfocus.hx.data.response.BaseResult
 import com.intfocus.hx.data.response.login.RegisterResult
@@ -38,31 +36,19 @@ import com.intfocus.hx.login.bean.NewUser
 import com.intfocus.hx.net.ApiException
 import com.intfocus.hx.net.CodeHandledSubscriber
 import com.intfocus.hx.net.RetrofitUtil
-import com.intfocus.hx.util.ActionLogUtil
-import com.intfocus.hx.util.ApiHelper
-import com.intfocus.hx.util.FileUtil
-import com.intfocus.hx.util.HttpUtil
-import com.intfocus.hx.util.K
-import com.intfocus.hx.util.ToastColor
-import com.intfocus.hx.util.ToastUtils
-import com.intfocus.hx.util.URLs
-import com.pgyersdk.javabean.AppBean
-import com.pgyersdk.update.PgyUpdateManager
-import com.pgyersdk.update.UpdateManagerListener
-
-import org.OpenUDID.OpenUDID_manager
-import org.json.JSONException
-import org.json.JSONObject
-
-import java.io.IOException
-
-import com.intfocus.hx.base.BaseActivity.kVersionCode
+import com.intfocus.hx.util.*
 import com.intfocus.hx.util.K.kCurrentUIVersion
 import com.intfocus.hx.util.K.kUserId
 import com.intfocus.hx.util.K.kUserName
 import com.intfocus.hx.util.URLs.kGroupId
 import com.intfocus.hx.util.URLs.kRoleId
 import com.intfocus.hx.util.URLs.kUserNum
+import com.pgyersdk.update.PgyUpdateManager
+import com.pgyersdk.update.UpdateManagerListener
+import org.OpenUDID.OpenUDID_manager
+import org.json.JSONException
+import org.json.JSONObject
+import java.io.IOException
 
 class LoginActivity : FragmentActivity() {
     var kFromActivity = "from_activity"         // APP 启动标识
@@ -103,7 +89,7 @@ class LoginActivity : FragmentActivity() {
         sharedPath = FileUtil.sharedPath(ctx)
 
         setContentView(R.layout.activity_login_new)
-        checkPgyerVersionUpgrade(this@LoginActivity, true)
+//        checkPgyerVersionUpgrade(this@LoginActivity, true)
 
         usernameEditText = findViewById(R.id.etUsername) as EditText
         passwordEditText = findViewById(R.id.etPassword) as EditText

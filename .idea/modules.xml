@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/HX-Android.iml" filepath="$PROJECT_DIR$/HX-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/HX-Android.iml" filepath="$PROJECT_DIR$/.idea/HX-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/HomeMetrics/HomeMetrics.iml" filepath="$PROJECT_DIR$/libs/HomeMetrics/HomeMetrics.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/PushSDK/PushSDK.iml" filepath="$PROJECT_DIR$/libs/PushSDK/PushSDK.iml" />

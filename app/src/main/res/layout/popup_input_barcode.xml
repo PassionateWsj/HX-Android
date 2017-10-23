@@ -32,16 +32,24 @@
                 android:textSize="16sp"/>
         </RelativeLayout>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="请输入”优惠券代码:”后的字母和数字\n注意:字母区分大小写"
+            android:textColor="@color/co10_syr"/>
+
         <EditText
             android:id="@+id/et_input_barcode"
             android:layout_width="match_parent"
             android:layout_height="52dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/bg_et_input_barcode"
             android:gravity="center"
-            android:inputType="number"
+            android:inputType="text"
             android:letterSpacing="0.1"
             android:textColor="@color/co10"
             android:textCursorDrawable="@drawable/cursor_input_barcode"

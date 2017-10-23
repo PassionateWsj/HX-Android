@@ -3,7 +3,7 @@
               xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="@drawable/login_bg"
+              android:background="@color/co10_syr"
               android:orientation="vertical"
               android:scaleType="fitXY">
 
@@ -15,12 +15,12 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:alpha="1"
-            android:background="@drawable/login_logo"/>
+            android:src="@drawable/logo"/>
 
     </RelativeLayout>
 
@@ -48,7 +48,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_alignParentBottom="true"
-            android:visibility="visible"
+            android:visibility="gone"
             app:progress_current="0"
             app:progress_max="100"
             app:progress_reached_color="@color/co2_syr"
@@ -66,7 +66,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
             android:textColor="@color/co10_syr"
-            android:visibility="visible"/>
+            android:visibility="gone"/>
     </RelativeLayout>
 
 

@@ -329,9 +329,9 @@ public class WebApplicationActivity extends BaseActivity implements OnPageChange
     void showComplaintsPopWindow(View clickView) {
         View contentView = LayoutInflater.from(this).inflate(R.layout.pop_menu_v2, null);
         x.view().inject(this, contentView);
-        if (!isInnerLink) {
-            llCopyLinkl.setVisibility(View.VISIBLE);
-        }
+//        if (!isInnerLink) {
+//            llCopyLinkl.setVisibility(View.VISIBLE);
+//        }
         if (isSupportSearch) {
             llShaixuan.setVisibility(View.GONE);
         }
@@ -700,22 +700,23 @@ public class WebApplicationActivity extends BaseActivity implements OnPageChange
 
     @Override
     public void onBackPressed() {
-            AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-            builder.setTitle("温馨提示")
-                    .setMessage("退出当前页面?")
-                    .setPositiveButton("确认", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            finish();
-                        }
-                    })
-                    .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            // 不进行任何操作
-                        }
-                    });
-            builder.show();
+        finish();
+//            AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
+//            builder.setTitle("温馨提示")
+//                    .setMessage("退出当前页面?")
+//                    .setPositiveButton("确认", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            finish();
+//                        }
+//                    })
+//                    .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialog, int which) {
+//                            // 不进行任何操作
+//                        }
+//                    });
+//            builder.show();
     }
 
     public void refresh(View v) {
@@ -910,14 +911,14 @@ public class WebApplicationActivity extends BaseActivity implements OnPageChange
             });
         }
 
-            @JavascriptInterface
-            public void toggleShowBannerMenu(final String state) {
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        iv_BannerSetting.setVisibility(state.equals("show") ? View.VISIBLE : View.GONE);
-                    }
-                });
+        @JavascriptInterface
+        public void toggleShowBannerMenu(final String state) {
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    iv_BannerSetting.setVisibility(state.equals("show") ? View.VISIBLE : View.GONE);
+                }
+            });
         }
 
         @JavascriptInterface

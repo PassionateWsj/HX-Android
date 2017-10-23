@@ -1,7 +1,6 @@
 package com.intfocus.hx.dashboard
 
 import android.Manifest
-import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
@@ -13,14 +12,12 @@ import android.provider.Settings
 import android.support.v4.app.FragmentActivity
 import android.support.v4.content.ContextCompat
 import android.support.v4.view.ViewPager
-import android.text.TextUtils
 import android.view.View
 import com.google.gson.Gson
 import com.intfocus.hx.R
 import com.intfocus.hx.YHApplication
 import com.intfocus.hx.bean.DashboardItemBean
 import com.intfocus.hx.dashboard.kpi.bean.NoticeBoardRequest
-import com.intfocus.hx.dashboard.mine.PassWordAlterActivity
 import com.intfocus.hx.dashboard.mine.bean.PushMessageBean
 import com.intfocus.hx.data.response.scanner.StoreItem
 import com.intfocus.hx.data.response.scanner.StoreListResult
@@ -29,26 +26,21 @@ import com.intfocus.hx.net.ApiException
 import com.intfocus.hx.net.CodeHandledSubscriber
 import com.intfocus.hx.net.RetrofitUtil
 import com.intfocus.hx.scanner.BarCodeScannerActivity
-import com.intfocus.hx.subject.SubjectActivity
-import com.intfocus.hx.subject.TableActivity
 import com.intfocus.hx.subject.WebApplicationActivity
-import com.intfocus.hx.subject.metrics.HomeTricsActivity
-import com.intfocus.hx.subject.template_v2.ModularTwo_Mode_Activity
-import com.intfocus.hx.util.*
+import com.intfocus.hx.util.ActionLogUtil
+import com.intfocus.hx.util.RxBusUtil
+import com.intfocus.hx.util.ToastUtils
+import com.intfocus.hx.util.URLs
 import com.intfocus.hx.view.NoScrollViewPager
 import com.intfocus.hx.view.TabView
-import com.pgyersdk.update.PgyUpdateManager
-import com.pgyersdk.update.UpdateManagerListener
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
-import org.json.JSONException
 import org.json.JSONObject
 import rx.Observable
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
 import sumimakito.android.advtextswitcher.AdvTextSwitcher
-import java.io.IOException
 import java.sql.SQLException
 
 class DashboardActivity : FragmentActivity(), ViewPager.OnPageChangeListener, AdvTextSwitcher.Callback {
@@ -315,7 +307,7 @@ class DashboardActivity : FragmentActivity(), ViewPager.OnPageChangeListener, Ad
      */
     fun pageLink(mBannerName: String, link: String) {
         when (mBannerName) {
-            "扫码" -> {
+            "券核销" -> {
                 if (ContextCompat.checkSelfPermission(this@DashboardActivity, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
                     val builder = AlertDialog.Builder(this@DashboardActivity)
                     builder.setTitle("温馨提示")

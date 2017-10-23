@@ -7,7 +7,6 @@ import android.content.SharedPreferences
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.view.animation.AlphaAnimation
@@ -76,9 +75,14 @@ class LauncherActivity : Activity(), Animation.AnimationListener {
     }
 
     override fun onAnimationEnd(p0: Animation?) {
-        number_progress_bar_splash.visibility = View.VISIBLE
-        tv_splash_status.visibility = View.VISIBLE
-        firstUnZipAssets()
+//        number_progress_bar_splash.visibility = View.VISIBLE
+//        tv_splash_status.visibility = View.VISIBLE
+//        firstUnZipAssets()
+        intent = Intent(this, LoginActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK and Intent.FLAG_ACTIVITY_SINGLE_TOP)
+        this.startActivity(intent)
+
+        finish()
     }
 
     override fun onAnimationStart(p0: Animation?) {

@@ -3,8 +3,8 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.intfocus.hx"
           android:hardwareAccelerated="false"
-          android:versionCode="36"
-          android:versionName="1.5.2">
+          android:versionCode="1"
+          android:versionName="1.0">
 
     <!-- 扫描条形码或二维码 -->
     <uses-permission android:name="android.permission.CAMERA"/>
